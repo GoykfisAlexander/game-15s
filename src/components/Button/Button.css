@@ -1,0 +1,18 @@
+.button {
+  background-color: rgb(132, 203, 0);
+  box-shadow: inset 0px 0px 2vmin black;
+  border: none;
+  text-shadow: 0px 0px 1vmin white;
+  overflow: hidden;
+  cursor: pointer;
+  width: 12vmin;
+  height: 6vmin;
+  font-size: 2vmin;
+  margin-left: 1vmin;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.button:active {
+  transform: scale(1);
+}
