@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Button.css";
 interface IButtonProps {
-  mix: any;
-  boxesOrLine: any;
-  incrementColorIndex: any;
+  mix: () => void;
+  boxesOrLine: () => void;
+  incrementColorIndex: () => void;
 }
 export const Button: React.FC<IButtonProps> = ({
   mix,

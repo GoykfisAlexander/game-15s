@@ -21,7 +21,7 @@ const colors = [
 interface IBoxProps {
   value: number;
   index: number;
-  onBoxClick: any;
+  onBoxClick: (boxValue: number, boxIndex: number) => void;
   colorIndex: number;
 }
 export const Box: React.FC<IBoxProps> = ({

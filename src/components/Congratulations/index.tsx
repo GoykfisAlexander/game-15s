@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./Congratulations.css";
 interface ICongratulationsProps {
-  textCong: any;
-  setTextCong: any;
+  textCong: string[];
+  setTextCong: (value: string[]) => void;
 }
 export const Congratulations: React.FC<ICongratulationsProps> = ({
   textCong,
