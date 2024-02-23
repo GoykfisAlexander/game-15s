@@ -6,6 +6,7 @@
   overflow: hidden;
   cursor: pointer;
   width: 12vmin;
+  min-width: fit-content;
   height: 6vmin;
   font-size: 2vmin;
   margin-left: 1vmin;

@@ -34,7 +34,7 @@ export function useUtils() {
       setTextCong([...textCongratulations]);
     }
   }, [field]);
-  function onBoxClick(boxValue: number, boxIndex: number) {
+  function boxMove(boxValue: number, boxIndex: number) {
     if (!boxesInLine(boxIndex, emptyIndex.current)) {
       return;
     }
@@ -54,6 +54,27 @@ export function useUtils() {
     setField(newField);
     extraClick();
     emptyIndex.current = boxIndex;
+  }
+  function swipe(boxValue: number, boxIndex: number, swipeDirection: string) {
+    let emptyBoxPosition = "";
+    if (emptyIndex.current > boxIndex) {
+      if (emptyIndex.current % 4 === boxIndex % 4) {
+        emptyBoxPosition = "down";
+      }
+      if (Math.floor(emptyIndex.current / 4) === Math.floor(boxIndex / 4)) {
+        emptyBoxPosition = "right";
+      }
+    } else {
+      if (emptyIndex.current % 4 === boxIndex % 4) {
+        emptyBoxPosition = "up";
+      }
+      if (Math.floor(emptyIndex.current / 4) === Math.floor(boxIndex / 4)) {
+        emptyBoxPosition = "left";
+      }
+    }
+    if (emptyBoxPosition === swipeDirection) {
+      boxMove(boxValue, boxIndex);
+    }
   }
 
   function mix() {
@@ -80,7 +101,8 @@ export function useUtils() {
     boxesOrLine,
     incrementColorIndex,
     field,
-    onBoxClick,
+    boxMove,
+    swipe,
     colorIndex,
   };
 }

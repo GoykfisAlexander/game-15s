@@ -1,3 +1,9 @@
+* {
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-focus-inner { border: 0; };
+}
 .field {
   cursor: pointer;
   background-color: antiquewhite;

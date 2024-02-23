@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Button.css";
+import "./index.css";
 interface IButtonProps {
   mix: () => void;
   boxesOrLine: () => void;

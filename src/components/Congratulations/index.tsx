@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./Congratulations.css";
+import "./index.css";
 interface ICongratulationsProps {
   textCong: string[];
   setTextCong: (value: string[]) => void;

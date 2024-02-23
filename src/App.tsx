@@ -11,7 +11,8 @@ function App() {
     boxesOrLine,
     incrementColorIndex,
     field,
-    onBoxClick,
+    boxMove,
+    swipe,
     colorIndex,
   } = useUtils();
   return (
@@ -30,7 +31,8 @@ function App() {
             value={value}
             index={i}
             key={value}
-            onBoxClick={onBoxClick}
+            boxMove={boxMove}
+            swipe={swipe}
             colorIndex={colorIndex}
           />
         ))}
